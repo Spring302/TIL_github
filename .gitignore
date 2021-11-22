@@ -1,0 +1,4 @@
+1. nadocoding/
+*.png
+grep*
+*.pyc
