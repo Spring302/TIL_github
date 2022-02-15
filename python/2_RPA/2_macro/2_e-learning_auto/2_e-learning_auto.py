@@ -1,3 +1,6 @@
+#-*-coding: utf-8-*-
+#-*-coding: euc-kr-*-
+
 import sys
 import pyautogui
 import logging
@@ -10,10 +13,10 @@ logger.setLevel(logging.DEBUG)
 streamHandler = logging.StreamHandler()
 streamHandler.setFormatter(logFormatter)
 logger.addHandler(streamHandler)
-window = pyautogui.getWindowsWithTitle("학습창 - Chrome")[0]
+# window = pyautogui.getWindowsWithTitle("학습창 - Chrome")[0]
 # window = pyautogui.getWindowsWithTitle("학습창 - Whale")[0]
-window.maximize()
-window.activate()
+# window.maximize()
+# window.activate()
 while True:
     btn_list = []
     btn_list.append(pyautogui.locateOnScreen("./btn_next2.png", confidence=0.8))
