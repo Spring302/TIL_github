@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="hello">
+      <header
+        style="
+          background-image: url('/banner.png');
+          background-size: 100% 100%;
+          border: 2px solid #3b6c9b;
+          padding: 30px;
+        "
+      >
+        <h1 style="color: cornsilk">HTML 정리</h1>
+      </header>
+      <a href="#bookmark">
+        <p>
+          북마크 : 맨 아래로 갑시다!!!
+          <button>Button</button>
+        </p>
+      </a>
+      <hr />
+      <p>첫 번째 단락</p>
+      <div>div는 block 요소임</div>
+      <div>div 그래서 자동으로 다음줄로 감</div>
+      <hr />
+      <p>두 번째 단락</p>
+      <p style="display: inline-block; border: 1px solid">
+        <img
+          src="1.png"
+          alt="flower"
+          width="200"
+          height="200"
+          style="float: left"
+        />
+
+        <strong>float 속성</strong> <br />
+        float 속성은 해당 HTML 요소가 주변의 다른 요소들과 자연스럽게 어울리도록
+        만들어 줍니다. 이 속성은 본래 위와 같은 목적으로 만들어졌지만, 현재는 웹
+        페이지의 레이아웃(layout)을 작성할 때 자주 사용됩니다. 다음 예제는
+        이미지와 글자를 함께 출력하는 예제입니다.
+      </p>
+      <h2>제목 3</h2>
+      <p>세 번째 단락</p>
+      <style>
+        div.relative {
+          position: relative;
+          left: 300px;
+          border: 1px solid #3b6c9b;
+        }
+      </style>
+      <div class="relative">이 줄은 300px 옆에 위치될 것입니다.</div>
+      <h2>제목 4</h2>
+      <p>네 번째 단락</p>
+      <form action="/layoutsample">
+        <input list="lectures" name="lecture" />
+        <datalist id="lectures">
+          <option value="HTML"></option>
+          <option value="CSS"></option>
+          <option value="JAVA"></option>
+          <option value="C++"></option>
+        </datalist>
+
+        <input type="submit" value="전송" />
+      </form>
+      <h2>제목 5</h2>
+      <p>다섯 번째 단락</p>
+      <object
+        data="https://tcpschool.com/examples/images/img_flower.png"
+      ></object>
+      <h2>제목 6</h2>
+      <p>여섯 번째 단락</p>
+      <h1>canvas 요소에 사각형 그리기</h1>
+
+      <h1>canvas 요소에 사각형 그리기</h1>
+
+      <canvas
+        id="drawCanvas"
+        width="300px"
+        height="200px"
+        style="border: 1px solid #993300"
+      >
+        이 문장은 사용자의 웹 브라우저가 canvas 요소를 지원하지 않을 때
+        나타납니다!
+      </canvas>
+
+      <script>
+        var paper = document.getElementById("drawCanvas");
+        var context = paper.getContext("2d");
+        context.strokeRect(10, 10, 250, 130);
+        context.fillStyle = "rgba(255,0,0,1)";
+        context.fillRect(0, 0, 200, 100);
+        context.clearRect(30, 30, 150, 50);
+        context.moveTo(0, 0);
+        context.lineTo(300, 200);
+        context.lineTo(150, 0);
+        context.lineTo(0, 0);
+        context.fillStyle = "#0099FF";
+        context.fill();
+        context.stroke();
+      </script>
+
+      <p>
+        가장 바깥쪽에 strokeRect() 함수를 사용하여 선만으로 이루어진 사각형을
+        그립니다.<br />
+        그 다음에는 fillRect() 함수를 사용하여 빨간색으로 채워진 사각형을
+        그립니다.<br />
+        가장 안쪽에는 clearRect() 함수를 사용하여 사각형 모양으로 안의 내용을
+        지워줍니다.
+      </p>
+      <h2>제목 7</h2>
+      <p>일곱 번째 단락</p>
+      <style>
+        div.page {
+          border: 3px solid #cd5c5c;
+          overflow: auto;
+        }
+        h2 {
+          text-align: center;
+        }
+        header {
+          border: 3px solid #ffd700;
+        }
+        nav {
+          border: 3px solid #ff1493;
+          width: 150px;
+          height: 200px;
+          float: left;
+        }
+        section {
+          border: 3px solid #00bfff;
+          margin-left: 150px;
+          height: 200px;
+        }
+        footer {
+          border: 3px solid #00fa9a;
+          clear: both;
+        }
+      </style>
+      <h1>float 속성을 이용한 레이아웃</h1>
+      <div class="page">
+        <header>
+          <h2>header 영역</h2>
+        </header>
+        <nav>
+          <h2>nav 영역</h2>
+          <p>여기에는 보통 메뉴가 들어갑니다.</p>
+        </nav>
+        <section>
+          <h2>section 영역</h2>
+          <p>
+            여기에는 페이지에 해당하는 내용이 들어갑니다.<br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare
+            sapien suscipit tincidunt ullamcorper. Cras ac sem sed mauris
+            maximus rhoncus vel in metus. Nam pharetra arcu sit amet dolor
+            interdum, eget scelerisque libero finibus. Phasellus quis vulputate
+            ante. Fusce sit amet viverra justo. Donec id elementum mauris. Nam
+            id porttitor nisl, et suscipit nunc. Vestibulum sit amet volutpat
+            quam. Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Duis placerat sem eu facilisis ultricies.
+          </p>
+        </section>
+        <footer>
+          <h2>footer 영역</h2>
+          <p>style="clear: both;" 를 주어 float 속성을 초기화합니다.</p>
+        </footer>
+      </div>
+      <h2>제목 8</h2>
+      <p>여덟 번째 단락</p>
+      <style>
+        div.eight {
+          border: 3px solid #7b68ee;
+          width: 300px;
+          padding: 10px;
+          margin: auto;
+        }
+      </style>
+      <h1>margin 속성을 이용한 가운데 정렬</h1>
+      <div class="eight">
+        margin의 속성값을 auto로 하면,<br />
+        수평으로 가운데 정렬을 할 수 있어요! <br />
+        width가 설정되어야 제대로 동작해요
+      </div>
+      <h2>제목 9</h2>
+      <p>아홉 번째 단락</p>
+
+      <h2>제목 10</h2>
+      <p>열 번째 단락</p>
+
+      <h2>제목 11</h2>
+      <p>열한 번째 단락</p>
+
+      <h2>제목 12</h2>
+      <p>열두 번째 단락</p>
+
+      <h2>제목 13</h2>
+      <p>열세 번째 단락</p>
+
+      <h2>제목 14</h2>
+      <p>열네 번째 단락</p>
+
+      <h2><a name="bookmark"></a>제목 15</h2>
+    </div>
+  </body>
+  <style>
+    .hello {
+      text-align: center;
+    }
+  </style>
+</html>
