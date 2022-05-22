@@ -3,10 +3,10 @@ def getTest2(idx, nn, reply, k):
         return 0
     for i in range(idx):  # ABA ,BAB ,ABA ...
         if reply[i:i+nn] == reply[i+nn:i+nn*2]:
-            print(f'{reply}:중복{reply[i:i+nn]}, {reply[i+nn:i+nn*2]}')
+            # print(f'{reply}:중복{reply[i:i+nn]}, {reply[i+nn:i+nn*2]}')
             return getTest2(idx, nn, reply, k-1)
-        else:
-            print(f'{reply}:중복아님{reply[i:i+nn]}, {reply[i+nn:i+nn*2]}')
+        # else:
+            # print(f'{reply}:중복아님{reply[i:i+nn]}, {reply[i+nn:i+nn*2]}')
 
 def getTest(reply, nlen, n, k):
     for nn in range(n, nlen):  # 길이 3, 4, 5....
