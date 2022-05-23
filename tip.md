@@ -1,1 +1,0 @@
-- VSCODE 사용자를 위한 Extension 추천[https://musma.github.io/2019/07/11/vscode-extension.html]
