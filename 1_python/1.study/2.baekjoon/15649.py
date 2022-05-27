@@ -10,15 +10,15 @@
 # print(result)
 
 # DFS(백트래킹) 사용
+# 순열
 def dfs():
     if len(s) == m:
         print(' '.join(map(str,s)))
     for i in range(1, n+1):
-        if i in s:
-            continue
-        s.append(i)
-        dfs()
-        s.pop()
+        if i not in s:
+            s.append(i)
+            dfs()
+            s.pop()
 
 n, m = map(int, input().split())
 s = []
