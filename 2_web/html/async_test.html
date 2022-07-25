@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    콘솔창을 확인하세요
+  </body>
+  <script>
+    function a(number) {
+       return new Promise((resolve, reject) => {
+          if (number > 4) {
+             reject()
+          }
+
+          setTimeout(() => {
+             console.log('A')
+             resolve()
+          }, 1000)
+       })
+    }
+
+    async function test() {
+       try {
+         await a(8) // 연산이 성공하여 resolve가 동작 -> fulfilled
+         console.log('Resolve!')
+       } catch(error) { // 연산 실패로 에러발생 -> rejected
+         console.log('Rejected!')
+       } finally { // 연산 결과 상관없이 무조건 작동
+         console.log('Done!')
+       }
+    }
+    test()
+  </script>
+</html>
